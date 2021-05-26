@@ -1,0 +1,251 @@
+body {
+  overflow: hidden;
+}
+
+.admin {
+  min-height: 760px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.admin > h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+
+  background: -webkit-linear-gradient(
+    20deg,
+    rgb(107, 80, 226),
+    rgb(174, 47, 233)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admin > p {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  background: -webkit-linear-gradient(
+    20deg,
+    rgb(107, 80, 226),
+    rgb(174, 47, 233)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admin-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.admin-img a img {
+  position: relative;
+  height: 200px;
+  width: 400px;
+  margin: 35px 0 0 0;
+  border: 0.1px solid blueviolet;
+  transition: 0.4s;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255);
+}
+
+.admin-img .admin-imgs a img:hover {
+  filter: hue-rotate(35deg);
+  transform: scale(1.1);
+  border: none;
+  box-shadow: 10px 10px 50px blueviolet;
+  cursor: pointer;
+}
+
+.admin-img .admin-imgs a:hover + .des {
+  filter: hue-rotate(35deg);
+  transform: scale(1.1);
+}
+
+.admin-imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.des {
+  position: relative;
+  width: 400px;
+  height: 10px;
+  /* opacity: 0; */
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 8px 0 0 0;
+  padding-bottom: 40px;
+  letter-spacing: 1.4px;
+  background-color: blueviolet;
+  transition: 0.4s;
+  transform: translateY(-100%);
+  color: white;
+  border-radius: 0 0 5px 5px;
+}
+
+.admins {
+  margin-top: 0px !important;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    overflow: scroll;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .admin-img a img {
+    margin-left: 7px;
+  }
+
+  .des {
+    margin-left: 7px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .admin {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .admin-img a img {
+    margin-right: 8px;
+  }
+
+  .admin-img p {
+    margin-right: 8px;
+  }
+}
+
+/* User CSS */
+
+.admin .sidebar {
+  position: relative;
+}
+
+.admin .sidebar .bg_shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.admin .sidebar__inner {
+  width: 270px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient( #0cbaba, #0e9fa4 );
+  z-index: 999;
+  transition: all 0.3s ease;
+  left: -100%;
+}
+
+.admin.active .sidebar__inner {
+  left: 0;
+}
+.admin.active .sidebar .bg_shadow {
+  visibility: visible;
+  opacity: 0.7;
+}
+
+.admin .sidebar__inner .profile_info {
+  padding: 30px 50px;
+  text-align: center;
+}
+
+.admin .sidebar__inner .profile_info .profile_img {
+  width: 125px;
+  margin: 0 auto 15px;
+}
+
+.admin .sidebar__inner .profile_info .profile_data .team_img {
+  width: 125px !important;
+  margin: 0 auto 15px !important;
+}
+
+.admin .sidebar__inner .profile_info .profile_img img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+.admin .sidebar__inner .profile_info .profile_data .name {
+  /* font-size: 22px; */
+  font-weight: 700;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.admin .sidebar__inner .profile_info .profile_data .role {
+  font-weight: 300;
+  color: blueviolet;
+  margin-bottom: 25px;
+}
+
+/* .admin .sidebar__inner .profile_info .profile_data .skills {
+  font-weight: 300;
+  text-decoration: underline;
+  color: blueviolet;
+  /* margin-bottom: 15px; */
+
+
+/* .admin .sidebar__inner .profile_info .profile_data .user-skills {
+  font-weight: 300;
+  color: #92285d;
+  margin-bottom: 25px;
+} */
+
+/* .admin .sidebar__inner .profile_info .profile_data .user-team {
+  font-weight: 300;
+  color: #92285d;
+  margin-bottom: 25px;
+} */
+
+.admin .sidebar__inner .profile_info .profile_data .other-details {
+  font-weight: 300;
+  /* text-decoration: 1px slateblue; */
+  color: blueviolet;
+  margin-top: 30px;
+  font-size: 20px !important;
+}
+
+
+.admin .sidebar__inner .profile_info .profile_data .user-name,.user-id {
+  font-weight: 300;
+  color: #FFE5B4;
+  /* font-size: 20px !important; */
+}
+
+/* .admin .sidebar__inner .profile_info .profile_data .user-id {
+  font-weight: 300;
+  color: #ff6700;
+} */
+
+.admin .close .fas{
+  transition: 0.4s;
+}
+
+.admin .close .fas:hover {
+  cursor: pointer;
+  color: blueviolet !important;
+}
+

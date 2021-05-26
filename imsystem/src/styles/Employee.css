@@ -1,0 +1,21 @@
+.open::-webkit-scrollbar {
+  width: 10px;
+  padding: 3px;
+}
+.open::-webkit-scrollbar-corner {
+  display: none;
+}
+.open::-webkit-scrollbar-track {
+  background: transparent;
+}
+.open::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 5px;
+}
+.open::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+.datePicker {
+  width: 1000px;
+}
